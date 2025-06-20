@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- we need to assign id to to Element to access it specifically -->
+    <p id="text"></p>
+
+    <p class="button"></p>
+    <h1 id="hidden"></h1>
+
+    <button id="const">Click</button>
+    <script>
+        // Accessing the Element using Id
+        document.getElementById("text").textContent = "Hello World using script"
+        // we can also access the element using Class name or just general query
+        // but now we have to mention the element specifically as it returns a list of elements with that class
+        document.getElementsByClassName("button")[0].textContent = "Button"
+        document.querySelector("h1").textContent = "Hidden Title"
+        // We can also apply functions on those elements
+        const element = document.getElementById("const")
+        element.onclick = () => {
+            alert("click")
+        }
+
+    </script>
+</body>
+
+</html>

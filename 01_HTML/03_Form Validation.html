@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <!-- form to catch and send data to api endpoint -->
+    <form action="/submit" method="POST">
+        <!-- input type to validate the entered data is in required format -->
+        <!-- There are other types of input as well like  -->
+        <!-- required attribute makes sure that the value is present in the form -->
+        <label>Email: <input type="email" required></label>
+        <label>Favorite Color: <input type="color" required></label>
+        <label>Date of Birth: <input type="datetime-local" required></label>
+
+        <!-- Max and Min Length for validation -->
+        <label>Description: <input type="text" maxlength="100" minlength="10"
+                placeholder="Enter something about yourself"></label>
+
+        <!-- Regex to Match a Pattern -->
+        <label>Phone Number: <input type="text" pattern="^\d{10}$" maxlength="10" required
+                title="Enter a 10-digit phone number"></label>
+
+        <!-- Disabled to turn off the input from user -->
+        <label>Location <input type="text" disabled></label>
+
+        <!-- ReadOnly Field -->
+        <label>About Company<input type="text" readonly></label>
+
+        <label>Agree to terms and conditions: <input type="checkbox" required></label>
+
+        <!-- Submit button to save the form -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
