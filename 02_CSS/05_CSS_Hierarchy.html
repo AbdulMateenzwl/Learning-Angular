@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Specificity Example</title>
+    <style>
+        /*  Element Selector */
+        p {
+            color: green;
+        }
+
+        /* Class Selector */
+        .highlight {
+            color: blue;
+        }
+
+        /* ID Selector */
+        #important {
+            color: red;
+        }
+
+        /* Pseudo-class Selector */
+        p:hover {
+            color: orange;
+        }
+
+        /* Attribute Selector */
+        p[data-color] {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Inline Style wins everything -->
+    <p id="important" class="highlight" data-color="true" style="color: black;">
+        This text uses INLINE style and will be black.
+    </p>
+
+    <!-- ID beats class, attribute, element -->
+    <p id="important" class="highlight" data-color="true">
+        This text uses ID selector and will be RED.
+    </p>
+
+    <!-- Class beats element -->
+    <p class="highlight">
+        This text uses CLASS selector and will be BLUE.
+    </p>
+
+    <!-- Attribute beats element -->
+    <p data-color="true">
+        This text uses ATTRIBUTE selector and will be PURPLE.
+    </p>
+
+    <!-- Element selector alone -->
+    <p>
+        This text uses ELEMENT selector and will be GREEN.
+    </p>
+
+</body>
+
+</html>

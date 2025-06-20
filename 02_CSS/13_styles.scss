@@ -1,0 +1,42 @@
+// ✅ Variables
+$primary-color: #3498db;
+$font-size: 16px;
+$padding: 20px;
+
+// ✅ Function
+@function double($value) {
+  @return $value * 2;
+}
+
+// ✅ Mixin
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+}
+
+// ✅ Logic with @if, @else if, @else
+$theme: dark;
+
+body {
+  background-color: if($theme == dark, #222, #fff);
+  color: if($theme == dark, #eee, #111);
+  font-size: $font-size;
+}
+
+// ✅ Nesting
+.container {
+  padding: $padding;
+
+  .box {
+    background-color: $primary-color;
+    padding: double(10px); // Uses function
+    @include rounded(8px);
+  }
+}
+
+// ✅ Loop
+@for $i from 1 through 3 {
+  .box-#{$i} {
+    width: 100px * $i;
+    height: 50px * $i;
+  }
+}

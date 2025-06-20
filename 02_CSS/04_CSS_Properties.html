@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Properties</title>
+    <style>
+        .box {
+            color: white;
+            /* Text color */
+            background-color: teal;
+            /* Background color */
+            margin: 40px;
+            /* Space outside the box */
+            padding: 20px;
+            /* Space inside the box */
+            border: 3px solid orange;
+            /* Border style, width, color */
+            width: 300px;
+            /* Width of the box */
+            height: 150px;
+            /* Height of the box */
+            display: block;
+            /* Block level element */
+            position: relative;
+            /* Positioning the element */
+        }
+
+        .inner-box {
+            background-color: coral;
+            color: black;
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            border: 2px dashed white;
+            position: absolute;
+            /* Positioned inside .box */
+            top: 20px;
+            right: 20px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            background-color: #ccc;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background-color: #ffd700;
+            padding: 15px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        This is a styled box using all basic CSS properties.
+        <div class="inner-box">Absolute Box</div>
+    </div>
+
+    <div class="sticky-box">Sticky Header</div>
+
+    <div class="flex-container">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">Grid Item 1</div>
+        <div class="grid-item">Grid Item 2</div>
+    </div>
+
+    <div class="fixed-box">Fixed Box</div>
+
+</body>
+
+</html>

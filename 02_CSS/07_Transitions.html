@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transitions</title>
+    <style>
+        #box {
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+        }
+
+        /* When the mouse hovers over the div it will transform with following properties */
+        /* With Transition it will take specified time to complete the transformation */
+        #box:hover {
+            transform: scale(1.5) skew(10deg) translateX(100px) rotate(45deg);
+            transition: all 1s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box"></div>
+</body>
+
+</html>

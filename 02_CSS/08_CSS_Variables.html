@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <style>
+        /* Define Variables in the root of the CSS */
+        :root {
+            --main-color: #343434;
+            --padding: 20px;
+        }
+
+        .box {
+            /* Now use at as variable from anywhere */
+            color: var(--main-color);
+            padding: var(--padding);
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+</body>
+
+</html>
