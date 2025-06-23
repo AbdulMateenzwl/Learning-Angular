@@ -1,0 +1,152 @@
+main {
+    flex: 1;
+    padding-top: 30px;
+    padding-left: 60px;
+    border: 1px solid rgba(155, 155, 155, 0.295);
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#input {
+    /* margin: auto 70px; */
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    border-radius: 5px;
+    height: 45px;
+    align-items: center;
+    max-width: 700px;
+}
+
+#input img {
+    height: 20px;
+    width: 20px;
+    margin: auto 8px;
+    opacity: 0.7;
+}
+
+#input>input {
+    flex: 1;
+    height: 45px;
+    border: none;
+    font-size: larger;
+}
+
+#input>input:focus {
+    outline: none;
+    border: nDone;
+    box-shadow: none;
+}
+
+#title {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#stack {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+#card {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    height: 60px;
+    padding-bottom: 40px;
+}
+
+#card>p {
+    font-size: medium;
+    margin-top: 10px;
+}
+
+#card>img {
+    height: 30px;
+    width: 30px;
+    opacity: .7;
+}
+
+#usage {
+    margin-top: 30px;
+}
+
+#usage>summary {
+    display: flex;
+    justify-content: space-between;
+}
+#usage > figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#balance_text {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#amount {
+    font-size: x-large;
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+#currency {
+    color: var(--secondary-color);
+    transform: translateX(30px);
+}
+
+#more {
+    background-color: rgb(236, 236, 236);
+    height: 30px;
+    width: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 5px;
+
+}
+
+#more>img {
+    height: 15px;
+    width: 15px;
+}
+
+#users {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#user {
+    border-top: 1px solid rgb(223, 223, 223);
+    border-bottom: 1px solid rgb(223, 223, 223);
+    max-width: 600px;
+    display: flex;
+    padding: 15px 5px;
+    align-items: center;
+}
+
+#user>img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+
+#user_details {
+    margin-left: 20px;
+}
+
+#user_details>.name {
+    font-weight: bold;
+}
+
+#user_details>.phone_number{
+    font-size: 12px;
+    color:var(--secondary-color)
+}
