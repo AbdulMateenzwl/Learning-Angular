@@ -1,0 +1,29 @@
+:root {
+    --primary-color: rgb(65, 65, 161);
+    --secondary-color: rgb(117, 117, 117);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a, a:visited{
+    text-decoration: none;
+}
+
+nav {
+    max-width: 25vw;
+    width: 350px;
+}
+
+
+
+.test_border{
+    border: 1px solid red;
+}
