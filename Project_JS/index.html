@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <link rel="stylesheet" href="./css/todo.css">
+    <link rel="stylesheet" href="./css/concept.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <hr>
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button class="btn orange" onclick="clearDisplay()">C</button>
+                <button class="btn blue" onclick="append('/')">/</button>
+                <button class="btn blue" onclick="append('*')">×</button>
+                <button class="btn blue" onclick="deleteLast()">⌫</button>
+
+                <button class="btn" onclick="append('7')">7</button>
+                <button class="btn" onclick="append('8')">8</button>
+                <button class="btn" onclick="append('9')">9</button>
+                <button class="btn blue" onclick="append('-')">-</button>
+
+                <button class="btn" onclick="append('4')">4</button>
+                <button class="btn" onclick="append('5')">5</button>
+                <button class="btn" onclick="append('6')">6</button>
+                <button class="btn blue" onclick="append('+')">+</button>
+
+                <button class="btn" onclick="append('1')">1</button>
+                <button class="btn" onclick="append('2')">2</button>
+                <button class="btn" onclick="append('3')">3</button>
+                <button class="btn red" onclick="calculate()">=</button>
+
+                <button class="btn wide" onclick="append('0')">0</button>
+                <button class="btn" onclick="append('.')">.</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>To-Do List</h2>
+        <hr>
+        <div class="todo_app">
+            <div class="input">
+                <input type="text" id="input" placeholder="Add Task">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <div id="tasks" class="tasks">
+            </div>
+            <button class="clear" onclick="clearTasks()">Clear All</button>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <h2>JavaScript Concept Demonstration</h2>
+        <hr>
+
+        <div id="concepts">
+            <div class="concept">
+                <p>Event Handling</p>
+                <button onclick="handleEventHandling()">Click Me!</button>
+                <input id="eventHandlingInput" type="text" disabled>
+            </div>
+            <div class="concept">
+                <p>Async Operation</p>
+                <button onclick="handleAsyncOperation()">Click Me!</button>
+                <input id="asyncOperationOutput" type="text" disabled>
+            </div>
+            <div class="concept">
+                <p>Error Handling</p>
+                <button onclick="handleError()">Click Me!</button>
+                <input id="errorHandlingOutput" type="text" disabled>
+            </div>
+            <div class="concept">
+                <p>Local Storage</p>
+                <input id="localStorageInput" type="text" placeholder="Enter text to save">
+                <div>
+                    <button onclick="handleLocalStorageSave()">Save</button>
+                    <button onclick="handleLocalStorageLoad()">Load</button>
+                </div>
+                <input id="localStorageOutput" type="text" disabled>
+            </div>
+            <div class="concept">
+                <p>Array Manipulation</p>
+                <button onclick="handleArrayManipulation()">Run</button>
+                <textarea id="arrayManipulationTextArea" type="text" disabled>Output in console</textarea>
+            </div>
+            <div class="concept">
+                <p>Object Manipulation</p>
+                <button onclick="handleObjectManipulation()">Run</button>
+                 <textarea name="" id="objectManipulationTextArea" disabled></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+    <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/todo.js"></script>
+    <script src="./scripts/concept.js"></script>
+
+</body>
+
+</html>
