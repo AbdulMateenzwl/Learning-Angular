@@ -1,0 +1,32 @@
+body{
+    padding:0;
+    margin: 0;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    width: 80vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > h2 {
+    font-weight: 500;
+    margin: 5px;
+}
+
+.container > hr{
+    outline: none;
+    background-color: #6aa1e0;
+    height: 3px;
+    border: none;
+    width: 100%;
+}
