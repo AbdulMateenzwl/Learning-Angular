@@ -1,1 +1,4 @@
-<p>server works!</p>
+<!-- ng Style Directive to dynamically change the style of element -->
+<!-- ng class Directive to dynamically change the class  -->
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:serverStatus === 'online'}">{{'Server'}} with ID
+    {{serverId}} is {{getServerStatus()}}</p>
