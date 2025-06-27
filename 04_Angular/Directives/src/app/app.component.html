@@ -3,6 +3,20 @@
     <div class="col-xs-12">
       <p appBasicHighlight>style me with basic directive!</p>
       <p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'pink'" >style me with basic directive!</p>
+
+
+      <div *appUnless="true">
+        <li>item</li>
+        <li>item</li>
+      </div>
+
+      <ul [ngSwitch]="value">
+        <p *ngSwitchCase="1">Value is 1</p>
+        <p *ngSwitchCase="2">Value is 2</p>
+        <p *ngSwitchCase="3">Value is 3</p>
+        <p *ngSwitchCase="4">Value is 4</p>
+        <p *ngSwitchDefault>Default Case</p>
+      </ul>
     </div>
   </div>
 </div>
