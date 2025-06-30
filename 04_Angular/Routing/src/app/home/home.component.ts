@@ -4,18 +4,18 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor( private router:Router) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onLoadServer(id: number) {
+    // Navigate programmatically with queryParameters and fragments
+    this.router.navigate(['/servers', id, 'edit'], {
+      queryParams: { allowEdit: '1' },
+      fragment: 'loading',
+    });
   }
-
-  onLoadServers(){
-    // Navigate programmatically
-    this.router.navigate(['/servers'])
-  }
-
 }
