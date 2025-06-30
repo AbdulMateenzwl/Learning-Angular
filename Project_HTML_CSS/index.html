@@ -1,0 +1,222 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Olith Banking</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aside.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./resources/logo.png" alt="Website Logo">
+        </div>
+        <div id="navlinks">
+            <p>Menu</p>
+            <ul>
+                <li>
+                    <img src="./resources/SVGs/home.svg" alt="">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <img src="./resources/SVGs/app.svg" alt="">
+                    <a href="#">Accounts</a>
+                </li>
+                <li>
+                    <img src="./resources/SVGs/card.svg" alt="">
+                    <a href="#">Cards</a>
+                </li>
+                <li>
+                    <img src="./resources/SVGs/contact.svg" alt="">
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <img src="./resources/SVGs/calculator.svg" alt="">
+                    <a href="#">Load Calculator</a>
+                </li>
+                <li>
+                    <img src="./resources/SVGs/setting.svg" alt="">
+                    <a href="#">Settings</a>
+                </li>
+            </ul>
+
+            <div id="payments">
+                <p>Scheduled Payments</p>
+
+                <div id="options">
+
+                    <a href="#">
+                        <div class="circle" style="color: rgba(91, 164, 237, 0.745);"></div>
+                        Monthly Rent
+                    </a>
+                    <a href="#">
+                        <div class="circle" style="color: rgba(237, 91, 91, 0.672);"></div>
+                        Food Payment
+                    </a>
+                    <a href="#">
+                        <div class="circle" style="color: rgba(91, 237, 140, 0.73);"></div>
+                        Utility Bills
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main -->
+    <main>
+        <div id="input">
+            <img src="./resources/SVGs/search.svg" alt="">
+            <input type="text">
+        </div>
+
+        <p id="title">Welcome back Mateen!</p>
+
+        <div id="stack">
+            <article class="card" style="background-color:rgba(203, 246, 203, 0.625) ;">
+                <img src="./resources/SVGs/card.svg" alt="">
+                <p style="color: rgb(73, 152, 73);">Transfer via card number</p>
+            </article>
+            <article class="card" style="background-color:rgba(185, 197, 243, 0.625) ;">
+                <img src="./resources/SVGs/bank.svg" alt="">
+                <p style="color: rgb(68, 87, 156);">Transfer to another Bank</p>
+            </article>
+            <article class="card" style="background-color:rgba(245, 208, 153, 0.625) ;">
+                <img src="./resources/SVGs/person.svg" alt="">
+                <p style="color: rgb(142, 89, 29);">Transfer via card number</p>
+            </article>
+            <article class="card" style="background-color:rgba(177, 239, 242, 0.625) ;">
+                <img src="./resources/SVGs/bank.svg" alt="">
+                <p style="color: rgb(47, 152, 151);">Transfer via card number</p>
+            </article>
+
+        </div>
+
+        <section id="usage">
+            <summary>
+                <div id="balance">
+                    <p id="balance_text">Balance</p>
+                    <span id="amount">1000 </span>
+                    <span id="currency">USD</span>
+                </div>
+                <div id="more">
+                    <img src="./resources/SVGs/more.svg" alt="">
+                </div>
+            </summary>
+            <figure>
+                <img src="./resources/graph.png" alt="">
+            </figu>
+
+        </section>
+
+
+        <section id="users">
+            <article class="user">
+                <img src="./resources/SVGs/avatar.svg" alt="">
+                <div class="user_details">
+                    <p class="name">
+                        Mateen
+                    </p>
+                    <p class="phone_number">+92 333 3333333</p>
+
+                </div>
+            </article>
+            <article class="user">
+                <img src="./resources/SVGs/avatar.svg" alt="">
+                <div class="user_details">
+                    <p class="name">
+                        Saad
+                    </p>
+                    <p class="phone_number">+92 333 3333333</p>
+
+                </div>
+            </article>
+            <article class="user">
+                <img src="./resources/SVGs/avatar.svg" alt="">
+                <div class="user_details">
+                    <p class="name">
+                        Saqib
+                    </p>
+                    <p class="phone_number">+92 333 3333333</p>
+
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+
+    <!-- aside -->
+    <aside>
+        <header id="topbar">
+            <a href=""><img src="./resources/SVGs/bell.svg" alt=""></a>
+            <a href=""><img src="./resources/SVGs/person.svg" style="width: 27px;" alt=""></a>
+            <a href=""><img src="./resources/SVGs/avatar.svg" alt=""></a>
+        </header>
+
+        <section id="card_details">
+            <img src="./resources/card.png" alt="" id="user_card">
+            <button>Add new card</button>
+        </section>
+
+        <section id="transactions">
+            <p class="day">today</p>
+            <article class="transaction">
+                <figure style="background-color: rgb(9, 72, 209);">
+                    <img src="./resources/SVGs/water.svg" alt="">
+                </figure>
+                <div class="transaction_details">
+                    <p style="font-weight: 700;">Water Bill</p>
+                    <p style="font-weight: 100;">Unsuccessful</p>
+                </div>
+                <p class="transaction_amount_sent"> -$280</p>
+            </article>
+            <hr>
+            <p class="day">yesterday</p>
+            <article class="transaction">
+                <figure style="background-color: rgb(225, 93, 93);">
+                    <img src="./resources/SVGs/docs.svg" alt="">
+                </figure>
+                <div class="transaction_details">
+                    <p style="font-weight: 700;">Income:Salary Oct</p>
+                </div>
+                <p class="transaction_amount_recieved"> $1200</p>
+            </article>
+            <article class="transaction">
+                <figure style="background-color: rgb(4, 127, 175);">
+                    <img src="./resources/SVGs/docs.svg" alt="">
+                </figure>
+                <div class="transaction_details">
+                    <p style="font-weight: 700;">Electricity Bill</p>
+                    <p style="font-weight: 100;">Unsuccessful</p>
+                </div>
+                <p class="transaction_amount_sent"> -$480</p>
+            </article>
+            <article class="transaction">
+                <figure style="background-color: rgb(235, 201, 10);">
+                    <img src="./resources/SVGs/docs.svg" alt="">
+                </figure>
+                <div class="transaction_details">
+                    <p style="font-weight: 700;">Icome:jane transfer</p>
+                </div>
+                <p class="transaction_amount_recieved"> $500</p>
+            </article>
+            <article class="transaction">
+                <figure style="background-color: rgb(94, 189, 94);">
+                    <img src="./resources/SVGs/docs.svg" alt="">
+                </figure>
+                <div class="transaction_details">
+                    <p style="font-weight: 700;">Internet Bill</p>
+                    <p style="font-weight: 100;">Unsuccessful</p>
+                </div>
+                <p class="transaction_amount_sent"> -$100</p>
+            </article>
+        </section>
+    </aside>
+</body>
+
+</html>
