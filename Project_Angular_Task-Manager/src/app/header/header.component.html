@@ -1,0 +1,33 @@
+<header
+  class="flex items-center justify-between px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md"
+>
+  <a class="flex items-center gap-2 font-bold text-xl" routerLink="/">
+    <span>📋</span>
+    <span>TaskManager</span>
+  </a>
+
+  <nav class="flex gap-6">
+    <a
+      *ngFor="let item of navItems"
+      [routerLink]="[item.toLowerCase()]"
+      [ngClass]="{}"
+      [routerLinkActive]="
+        'bg-white/20 text-white font-semibold hover:bg-white/10'
+      "
+      class="px-4 py-2 rounded-md transition-all hover:bg-white/5"
+    >
+      {{ item }}
+    </a>
+  </nav>
+
+  <div class="flex items-center gap-3">
+    <div
+      class="w-9 h-9 rounded-full bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center text-sm font-semibold text-white"
+    >
+      👤
+    </div>
+    <span class="font-medium">John Doe</span>
+  </div>
+</header>
+
+<router-outlet> </router-outlet>
