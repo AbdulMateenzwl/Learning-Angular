@@ -43,7 +43,7 @@
   </div>
 
   <!-- Task Cards -->
-  <div *ngFor="let task of tasks | async">
+  <div *ngFor="let task of tasks">
     <app-task-card [task]="task"></app-task-card>
   </div>
 </div>

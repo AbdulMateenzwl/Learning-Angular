@@ -1,25 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/task.model';
-import { TaskStatus } from '../enums/taskStatus.enum';
-import { TaskPriority } from '../enums/taskPriority.enum';
 import { TaskService } from 'src/app/services/task.service';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-task-management',
   templateUrl: './task-management.component.html',
   styleUrls: ['./task-management.component.scss'],
 })
-export class TaskManagementComponent implements OnInit {
+export class TaskManagementComponent implements OnInit, OnDestroy {
   statusFilter = '';
   priorityFilter = '';
   searchTerm = '';
 
-  tasks: Observable<Task[]> = new BehaviorSubject<Task[]>([]);
+  tasksSubscription!: Subscription;
+
+  tasks: Task[] = [];
 
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+    this.tasksSubscription = this.taskService.getTasks().subscribe((tasks) => {
+      this.tasks = tasks;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.tasksSubscription.unsubscribe();
   }
 }

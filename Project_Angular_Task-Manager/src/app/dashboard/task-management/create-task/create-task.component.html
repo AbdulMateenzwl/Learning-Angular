@@ -9,9 +9,9 @@
     <!-- Form Fields -->
     <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="flex flex-col h-full">
       <div class="mb-4">
-        <label class="block text-gray-700 mb-1" for="taskTitle">Task Title</label>
-        <input id="taskTitle" type="text" formControlName="taskTitle" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter task title" />
-        <div *ngIf="taskForm.get('taskTitle')?.touched && taskForm.get('taskTitle')?.invalid" class="text-red-500 text-xs mt-1 ml-1">Task title is required.</div>
+        <label class="block text-gray-700 mb-1" for="title">Task Title</label>
+        <input id="title" type="text" formControlName="title" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter task title" />
+        <div *ngIf="taskForm.get('title')?.touched && taskForm.get('title')?.invalid" class="text-red-500 text-xs mt-1 ml-1">Task title is required.</div>
       </div>
       <div class="mb-4">
         <label class="block text-gray-700 mb-1" for="description">Description</label>

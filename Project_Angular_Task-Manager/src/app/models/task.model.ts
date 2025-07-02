@@ -1,11 +1,16 @@
-import { TaskPriority } from "../dashboard/enums/taskPriority.enum";
-import { TaskStatus } from "../dashboard/enums/taskStatus.enum";
+import { TaskPriority } from '../dashboard/enums/taskPriority.enum';
+import { TaskStatus } from '../dashboard/enums/taskStatus.enum';
 
-export interface Task {
-  id: string;
-  title: string;
-  description: string;
-  status: TaskStatus;
-  priority: TaskPriority;
-  dueDate: Date;
+export class Task {
+  public id: string;
+  
+  constructor(
+    public title: string,
+    public description: string,
+    public status: TaskStatus,
+    public priority: TaskPriority,
+    public dueDate: Date
+  ) {
+    this.id = '';
+  }
 }
