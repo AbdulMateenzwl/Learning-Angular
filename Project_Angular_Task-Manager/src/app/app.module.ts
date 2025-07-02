@@ -9,6 +9,8 @@ import { DashboardDetailsComponent } from './dashboard/dashboard-details/dashboa
 import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SettingsComponent } from './settings/settings.component';
+import { TaskManagementComponent } from './dashboard/task-management/task-management.component';
+import { CreateTaskComponent } from './dashboard/task-management/create-task/create-task.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardDetailsComponent,
     TasksComponent,
     ProjectsComponent,
-    SettingsComponent
+    SettingsComponent,
+    TaskManagementComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,

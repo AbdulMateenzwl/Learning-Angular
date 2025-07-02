@@ -4,10 +4,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SettingsComponent } from './settings/settings.component';
+import { CreateTaskComponent } from './dashboard/task-management/create-task/create-task.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [{ path: 'create', component: CreateTaskComponent }],
+  },
   { path: 'tasks', component: TasksComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'settings', component: SettingsComponent },

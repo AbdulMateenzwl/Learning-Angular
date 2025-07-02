@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   navItems = ['Dashboard', 'Tasks', 'Projects', 'Settings'];
   active = 'Dashboard';
+showMenu: any;
 }

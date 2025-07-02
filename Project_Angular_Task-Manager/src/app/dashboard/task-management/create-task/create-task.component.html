@@ -1,0 +1,40 @@
+<!-- Modal Overlay -->
+<div class="fixed inset-0 flex sm:items-center justify-center z-50 bg-white sm:bg-black/30">
+  <!-- Modal Container -->
+  <div class="bg-white rounded-lg sm:shadow-2xl sm:border w-full max-w-md p-6 relative flex flex-col">
+    <!-- Close Button -->
+    <a [routerLink]="['../']" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold focus:outline-none" aria-label="Close">&times;</a>
+    <!-- Modal Title -->
+    <h2 class="text-2xl font-semibold mb-6">Add New Task</h2>
+    <!-- Form Fields -->
+    <form class="flex flex-col h-full">
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-1" for="taskTitle">Task Title</label>
+        <input id="taskTitle" type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter task title" />
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 mb-1" for="description">Description</label>
+        <textarea id="description" rows="3" cols="9" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 max-h-48 overflow-auto" placeholder="Enter description"></textarea>
+      </div>
+      <div class="flex gap-4 mb-6">
+        <div class="flex-1">
+          <label class="block text-gray-700 mb-1" for="priority">Priority</label>
+          <select id="priority" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+        <div class="flex-1">
+          <label class="block text-gray-700 mb-1" for="dueDate">Due Date</label>
+          <input id="dueDate" type="date" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+      </div>
+      <!-- Action Buttons -->
+      <div class="flex justify-end gap-2 mt-auto">
+        <a [routerLink]="['../']" type="button" class="px-4 py-2 rounded bg-gray-100 text-gray-700 hover:bg-gray-200">Cancel</a>
+        <button type="submit" class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">Add Task</button>
+      </div>
+    </form>
+  </div>
+</div>
