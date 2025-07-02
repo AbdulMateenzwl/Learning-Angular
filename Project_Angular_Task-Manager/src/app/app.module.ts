@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SettingsComponent } from './settings/settings.component';
 import { TaskManagementComponent } from './dashboard/task-management/task-management.component';
 import { CreateTaskComponent } from './dashboard/task-management/create-task/create-task.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,10 @@ import { CreateTaskComponent } from './dashboard/task-management/create-task/cre
     ProjectsComponent,
     SettingsComponent,
     TaskManagementComponent,
-    CreateTaskComponent
+    CreateTaskComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
