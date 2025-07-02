@@ -18,7 +18,7 @@ export class TaskService {
         'Create login and registration functionality with JWT tokens',
       status: TaskStatus.PENDING,
       priority: TaskPriority.HIGH,
-      dueDate: new Date(),
+      dueDate: new Date('2025-03-03'),
     },
     {
       id: '2',
@@ -26,7 +26,7 @@ export class TaskService {
       description: 'Create mobile-friendly dashboard with CSS Grid and Flexbox',
       status: TaskStatus.PENDING,
       priority: TaskPriority.HIGH,
-      dueDate: new Date(),
+      dueDate: new Date('2025-03-03'),
     },
   ];
 

@@ -1,11 +1,12 @@
 <!-- Modal Overlay -->
-<div class="fixed inset-0 flex sm:items-center justify-center z-50 bg-white sm:bg-black/30">
+<div class="fixed inset-0 flex sm:items-center justify-center z-50 bg-white sm:bg-black/40" (click)="onOutsideClick($event)">
   <!-- Modal Container -->
-  <div class="bg-white rounded-lg sm:shadow-2xl sm:border w-full max-w-md p-6 relative flex flex-col">
+  <div #cardContainer class="bg-white rounded-lg sm:shadow-2xl sm:border w-full max-w-md p-6 relative flex flex-col" >
     <!-- Close Button -->
-    <a [routerLink]="['../']" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold focus:outline-none" aria-label="Close">&times;</a>
+    <a [routerLink]="['/dashboard']" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold focus:outline-none" aria-label="Close">&times;</a>
     <!-- Modal Title -->
-    <h2 class="text-2xl font-semibold mb-6">Add New Task</h2>
+    <h2 class="text-2xl font-semibold mb-6" *ngIf="!updateOpen">Add New Task</h2>
+    <h2 class="text-2xl font-semibold mb-6" *ngIf="updateOpen">Update Task</h2>
     <!-- Form Fields -->
     <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="flex flex-col h-full">
       <div class="mb-4">
@@ -17,7 +18,7 @@
         <label class="block text-gray-700 mb-1" for="description">Description</label>
         <textarea id="description" rows="3" cols="9" formControlName="description" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 max-h-48 overflow-auto" placeholder="Enter description"></textarea>
       </div>
-      <div class="flex gap-4 mb-6">
+      <div class="flex gap-4 mb-4">
         <div class="flex-1">
           <label class="block text-gray-700 mb-1" for="priority">Priority</label>
           <select id="priority" formControlName="priority" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
@@ -32,10 +33,20 @@
           <div *ngIf="taskForm.get('dueDate')?.touched && taskForm.get('dueDate')?.invalid" class="text-red-500 text-xs mt-1 ml-1">Due date is required.</div>
         </div>
       </div>
+      <div *ngIf="updateOpen" class="flex-1 mb-6">
+        <label class="block text-gray-700 mb-1" for="taskStatus">Status</label>
+        <select id="taskStatus" formControlName="taskStatus"
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+      </div>
       <!-- Action Buttons -->
       <div class="flex justify-end gap-2 mt-auto">
-        <a [routerLink]="['../']" type="button" class="px-4 py-2 rounded bg-gray-100 text-gray-700 hover:bg-gray-200">Cancel</a>
-        <button (ngSubmit)="onSubmit()" class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 disabled:bg-blue-300" [disabled]="taskForm.invalid">Add Task</button>
+        <a [routerLink]="['/dashboard']" type="button" class="px-4 py-2 rounded bg-gray-100 text-gray-700 hover:bg-gray-200">Cancel</a>
+        <button (ngSubmit)="onSubmit()" class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 disabled:bg-blue-300" [disabled]="taskForm.invalid" *ngIf="!updateOpen">Add Task</button>
+        <button (ngSubmit)="onSubmit()" class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 disabled:bg-blue-300" [disabled]="taskForm.invalid" *ngIf="updateOpen">Update Task</button>
       </div>
     </form>
   </div>

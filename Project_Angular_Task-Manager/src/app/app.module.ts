@@ -13,6 +13,7 @@ import { TaskManagementComponent } from './dashboard/task-management/task-manage
 import { CreateTaskComponent } from './dashboard/task-management/create-task/create-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskCardComponent } from './dashboard/task-management/task-card/task-card.component';
+import { TaskResolver } from './dashboard/task-management/task-resolver.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { TaskCardComponent } from './dashboard/task-management/task-card/task-ca
     TaskCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [],
+  providers: [TaskResolver],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
