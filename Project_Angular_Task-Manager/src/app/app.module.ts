@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { TaskManagementComponent } from './dashboard/task-management/task-management.component';
 import { CreateTaskComponent } from './dashboard/task-management/create-task/create-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TaskCardComponent } from './dashboard/task-management/task-card/task-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SettingsComponent,
     TaskManagementComponent,
     CreateTaskComponent,
+    TaskCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

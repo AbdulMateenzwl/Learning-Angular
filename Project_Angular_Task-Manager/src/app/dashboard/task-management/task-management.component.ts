@@ -1,30 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Task } from 'src/app/models/task.model';
+import { TaskStatus } from '../enums/taskStatus.enum';
+import { TaskPriority } from '../enums/taskPriority.enum';
+import { TaskService } from 'src/app/services/task.service';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-task-management',
   templateUrl: './task-management.component.html',
   styleUrls: ['./task-management.component.scss'],
 })
-export class TaskManagementComponent {
+export class TaskManagementComponent implements OnInit {
   statusFilter = '';
   priorityFilter = '';
   searchTerm = '';
 
-  tasks = [
-    {
-      title: 'Implement user authentication system',
-      description:
-        'Create login and registration functionality with JWT tokens',
-      status: 'Pending',
-      priority: 'High Priority',
-      dueDate: 'Dec 15, 2024',
-    },
-    {
-      title: 'Design responsive dashboard layout',
-      description: 'Create mobile-friendly dashboard with CSS Grid and Flexbox',
-      status: 'In Progress',
-      priority: 'Medium Priority',
-      dueDate: 'Dec 12, 2024',
-    },
-  ];
+  tasks: Observable<Task[]> = new BehaviorSubject<Task[]>([]);
+
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    this.tasks = this.taskService.getTasks();
+  }
 }
