@@ -8,20 +8,21 @@ import { Subject } from 'rxjs';
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Name',
-      'Description of recipe',
-      'https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg',
-      [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
-    ),
-    new Recipe(
-      'Recipe',
-      'Description of recipe',
-      'https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg',
-      [new Ingredient('Bread', 4), new Ingredient('Meat', 5)]
-    ),
-  ];
+  private recipes: Recipe[] = [];
+  // [
+  //   new Recipe(
+  //     'Name',
+  //     'Description of recipe',
+  //     'https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg',
+  //     [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
+  //   ),
+  //   new Recipe(
+  //     'Recipe',
+  //     'Description of recipe',
+  //     'https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg',
+  //     [new Ingredient('Bread', 4), new Ingredient('Meat', 5)]
+  //   ),
+  // ];
 
   constructor(private slService: ShoppingListService) {}
 
@@ -50,5 +51,10 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
+  }
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
   }
 }
