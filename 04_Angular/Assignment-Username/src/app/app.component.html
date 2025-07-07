@@ -1,0 +1,7 @@
+<div class="container">
+    <label for="">Username</label>
+    <!-- Two Way binding using ngModel -->
+    <input type="text" class="form-control" [(ngModel)]="username" />
+    <p>{{username}}</p>
+    <button class="btn btn-primary" [disabled]="!username" (click)="username=''">Reset User</button>
+</div>

@@ -1,0 +1,17 @@
+<label for="serverName">Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> One way data binding -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText]="serverCreationStatus"></p> -->
+
+<!-- if directive mean that the element is not present in dom all the time instead of being hidden -->
+<p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
+
+<!-- Using ng-template for else -->
+<!-- <p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template> -->
+
+<app-server *ngFor="let server of servers">
+</app-server>
