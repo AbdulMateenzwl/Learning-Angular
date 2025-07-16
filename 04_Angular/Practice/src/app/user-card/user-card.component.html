@@ -1,0 +1,17 @@
+<div class="profile-container" *ngIf="user">
+  <div class="profile-header">
+    <div class="profile-avatar">
+      <img [src]="user.avatar" [alt]="user.name + ' avatar'" class="avatar-image">
+    </div>
+    <div class="profile-info">
+      <h1 class="profile-name">{{ user.name }}</h1>
+      <p class="profile-id">ID: {{ user.id }}</p>
+      <p class="profile-date">Member since {{ user.createdAt | date:'MMMM yyyy' }}</p>
+    </div>
+  </div>
+
+  <div class="loading-container" *ngIf="!user">
+    <div class="loading-spinner"></div>
+    <p>Loading profile...</p>
+  </div>
+</div>

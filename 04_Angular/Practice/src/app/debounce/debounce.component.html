@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Load User Profile</h2>
+
+  <input
+    type="number"
+    [formControl]="userId"
+    placeholder="Enter User ID"
+    class="user-input"
+  />
+
+  <p *ngIf="userId.invalid && userId.touched" class="error">
+    Please enter a valid User ID
+  </p>
+</div>
+  
